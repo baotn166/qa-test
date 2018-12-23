@@ -83,3 +83,6 @@ $ docker-compose exec workspace php artisan route:cache
 
 ## Define a Release process
 
+> Our app has some tests set, unit, feature and e2e. Can you set up a tool that runs them? 
+
+Sure thing! Please check
