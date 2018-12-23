@@ -85,4 +85,4 @@ $ docker-compose exec workspace php artisan route:cache
 
 > Our app has some tests set, unit, feature and e2e. Can you set up a tool that runs them? 
 
-Sure thing! Please check
+Sure thing! Please check `.travis.yml` file for that or you can check the status of CI on travis.org
