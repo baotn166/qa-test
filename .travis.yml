@@ -1,0 +1,20 @@
+matrix:
+  include:
+    - language: php
+      php: "7.2"
+      before_script:
+        - cp .env.travis .env
+        - mysql -e 'create database homestead;'
+        - composer self-update
+        - composer install --no-interaction
+        - php artisan migrate --seed
+      script:
+        - vendor/bin/phpunit tests
+    - language: node_js
+      node: 8
+      cache:
+        directories:
+          - ~/.npm
+          - node_modules
+      script:
+        - npm run test
